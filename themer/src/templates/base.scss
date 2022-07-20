@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+$colors: (
+  primary: primaryVar,
+  primary-light: lighten(primaryVar, 5%),
+  accent: accentVar,
+  accent-light: lighten(accentVar, 5%),
+  bg-white: #fff,
+  btn-primary: btnPrimaryVar,
+  btn-font: btnFontVar,
+  primary-shadow: #e8f0fe,
+  text-primary: textPrimaryVar,
+  text-secondary: textSecondaryVar,
+  border-color: borderColorVar,
+  border-bottom: borderBottomColorVar,
+  border-focus-color: borderFocusColorVar,
+  input-bg: inputBgColorVar,
+  card-box-shadow: rgba(0, 0, 0, 0.16),
+  bg-form: formBgColorVar,
+  error: errorColorVar,
+);
+
+// Logo / images
+$img-url: 'imgUrlVar';
+$img-center: center;
+$img-no-repeat: no-repeat;
+$logo-bg-size: contain;
+$img-bg-size: cover;
+$bg-img: 'bgImgUrlVar';
+
+// Alignment
+$login-card-alignment: center;
+
+// Fonts
+$font-family-base: 'baseFontVar', 'Open Sans', arial !default;
+$font-family-alt: 'altFontVar', arial !default;
+
+// Font sizes
+$font-size-base: 1rem !default;
+$font-size-xl: ($font-size-base * 1.5);
+$font-size-lg: ($font-size-base * 1.25);
+$font-size-sm: ($font-size-base * 0.875);
+$font-size-xs: ($font-size-base * 0.75);
+
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-500: 500 !default;
+$font-weight-bold: 600 !default;
+$font-weight-extra-bold: 700 !default;
+
+$font-weight-base: $font-weight-normal !default;
+
+$h1-font-size: $font-size-base * 2.5 !default;
+$h2-font-size: $font-size-base * 2 !default;
+$h3-font-size: $font-size-base * 1.75 !default;
+$h4-font-size: $font-size-base * 1.5 !default;
+$h5-font-size: $font-size-base * 1.25 !default;
+$h6-font-size: $font-size-base !default;

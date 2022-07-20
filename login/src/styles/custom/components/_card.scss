@@ -1,0 +1,59 @@
+.container{
+    background-image: $bg-img;
+}
+
+.custom-card-wrapper{
+    display: flex;
+    justify-content: $login-card-alignment;
+
+    .custom-card{
+        position: relative;
+        width: 32.5625rem;
+        padding: 48px 40px 36px;
+        background-color: color(bg-white);
+        box-sizing: border-box;
+        border: 1px solid #dadce0;
+        -webkit-border-radius: 8px;
+        border-radius: 8px;
+        .loadingBarContainer{
+            height: 4px;
+            left: 0;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        .loadingBar{
+            width: 0%;
+            border-radius: 8px 8px 0 0;
+            height: 8px;
+            background-color: color(primary);
+            // animation: slideInFromLeft 1s ease forwards;
+        }
+        .loadingBarInProgress{
+            width: 0%;
+            border-radius: 8px 8px 0 0;
+            height: 8px;
+            background-color: color(primary);
+            animation: slideInFromLeft 1.5s ease forwards infinite;
+            // transition: opacity 250ms linear;
+        }
+        }
+    }
+    .custom-card:empty{
+        position: relative;
+        width: 32.5625rem;
+        padding: 48px 40px 36px;
+        background-color: color(bg-white);
+        box-sizing: border-box;
+        border: 1px solid #dadce0;
+        -webkit-border-radius: 8px;
+        border-radius: 8px;
+    }
+    
+}
+@keyframes slideInFromLeft {
+    from {
+      transform: translateX(-100%);
+    }
+    to{ width: 100%; }
+}

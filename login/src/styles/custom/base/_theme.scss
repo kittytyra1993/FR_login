@@ -1,0 +1,6 @@
+html,body{
+    @include logoBG($bg-img, $img-center, $img-no-repeat, $img-bg-size);
+    height: 100%;
+    margin: 0;
+    font-family: $font-family-base;
+}

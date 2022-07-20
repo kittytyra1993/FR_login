@@ -1,0 +1,20 @@
+<p>main works!</p>
+
+<div class="text-center">
+    <form [formGroup]="authnForm" (ngSubmit)="nextStep(authnForm.value)">
+        <p *ngFor="let callback of currentStep? currentStep['callbacks']: null">
+            <span [ngSwitch]="callback.payload.type">
+                <div *ngSwitchCase="'NameCallback'">
+                    <app-name-callback [nameCallback_Form]="authnForm.get('NameCallback_Form')"></app-name-callback>
+                </div>
+                <div *ngSwitchCase="'PasswordCallback'">
+                    <app-password-callback [passwordCallback_Form]="authnForm.get('PasswordCallback_Form')"></app-password-callback>
+                </div>
+                <div *ngSwitchDefault>
+                    <p>Something went wrong</p>
+                </div>
+            </span>
+        </p>
+        <button type="submit">Submit</button>
+    </form>
+</div>

@@ -1,0 +1,73 @@
+<div class="container h-100 bg">
+  <div class="row h-100 justify-content-center align-items-center no-gutters">
+    <div class="col">
+      <app-card [loading]="loading" @fade>
+        <div [ngClass]="loading ? 'loading-wrapper' : 'wrapper'">
+          <div class="text-center">
+            <div class="card-header">
+              <div class="form-logo"></div>
+            </div>
+          </div>
+
+          <div *ngIf="!loading" [ngClass]="PasswordCallback ? text-left : text-center ">
+            <form [formGroup]="authnForm" (ngSubmit)="sendStepResponse(authnForm.value)" @fadeSlideInOut>
+              <div *ngIf="currentStep.getHeader() == 'Sign in'" class="text-center">
+                <div class="form-header">
+                  <h2> Sign in to your account</h2>
+                </div>
+
+                <div class="form-header-two">
+                  Don't have an account? <a href="https://www.lowes.com/u/register">Sign up today.</a>
+                </div>
+              </div>
+              <div *ngIf="currentStep.getHeader()">
+                <div class="text-center mt-2">
+                  <div class="text-center user-tag" *ngIf="currentStep.getHeader() != 'Sign in'">
+                    <span>
+                      <i class="fa fa-user-circle-o"></i>
+                      {{user}}
+                    </span>
+                  </div>
+                </div>
+                <div [ngClass]="currentStep.getHeader() == 'Sign in' ? 'text-left mt-3' : 'text-center mt-3'">
+                  <span
+                    [ngClass]="currentStep.getHeader().includes('try again') ? 'invalid' : 'form-header'">{{currentStep.getHeader()}}</span>
+                </div>
+              </div>
+              <p class="mt-3" *ngFor="let callback of currentStep ? currentStep.callbacks : null; let i = index">
+                <span [ngSwitch]="callback.getType()">
+                  <div *ngSwitchCase="'NameCallback'">
+                    <app-name-callback [nameCallbackObject]="nameCallbackObject"></app-name-callback>
+                  </div>
+                  <div *ngSwitchCase="'PasswordCallback'">
+                    <app-password-callback [passwordCallbackObject]="passwordCallbackObject"></app-password-callback>
+                  </div>
+                  <div *ngSwitchCase="'ChoiceCallback'">
+                    <!-- TODO:  choiceCallbackObject[i] -- Works only under the scenario where the response has only choice callbacks.
+                     Needs to be updated.  -->
+                    <app-choice-callback [choiceCallbackObject]="choiceCallbackObject[i]"></app-choice-callback>
+                  </div>
+                  <div *ngSwitchCase="'ConfirmationCallback'">
+                    <app-confirmation-callback [confirmationCallbackObject]="confirmationCallbackObject">
+                    </app-confirmation-callback>
+                  </div>
+                  <div *ngSwitchDefault>
+                    <p>Something went wrong</p>
+                  </div>
+                </span>
+              </p>
+              <div class="d-flex pt-3">
+                <span *ngIf="currentStep.getHeader() == 'Sign in'" class="links mt-1">Forgot password?</span>
+                <span class="spacer"></span>
+                <button type="submit">Submit</button>
+              </div>
+            </form>
+            <span class="errors" *ngIf="authFailed">
+              Something went wrong. Please try again.
+            </span>
+          </div>
+        </div>
+      </app-card>
+    </div>
+  </div>
+</div>

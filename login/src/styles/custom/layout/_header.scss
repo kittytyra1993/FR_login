@@ -1,0 +1,28 @@
+// header{
+//     background-image: linear-gradient(87deg, #1a1e5a, #122d98);
+//     border-bottom: 4px solid #f7b600;
+//     height: 68px;
+// }
+.nav {
+  display: block;
+}
+
+.navbar {
+  position: relative;
+  min-height: 8%;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  background: color(bg-white);
+  box-shadow: 0 0.125rem 0.25rem 0 rgba(0,0,0,.15);
+}
+.navbar-static-top {
+  z-index: 1000;
+  border-width: 0 0 1px;
+}
+
+.header-logo {
+  @include logoBG($img-url, $img-center, $img-no-repeat, $logo-bg-size);
+  display: inline-block;
+  width: 8rem;
+  height: 4.5rem;
+}

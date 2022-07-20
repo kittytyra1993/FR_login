@@ -1,0 +1,11 @@
+<div [formGroup]="nameCallbackObject.form">
+  <div class = "d-flex">
+  <input type="text" class="form-ctrl" formControlName="nameControl" placeholder="{{header}}" spellcheck="false" (focus)="nameFocus = true" (blur)="nameFocus = false"/>
+  </div>
+  <div class = "errors" *ngIf="nameCallbackObject.form.controls['nameControl'].invalid && (nameCallbackObject.form.controls['nameControl'].dirty || nameCallbackObject.form.controls['nameControl'].touched) && !nameFocus">
+  <span @fadeSlideInOut  *ngIf = "nameCallbackObject.form.controls['nameControl'].errors.required"> 
+      Please enter your username. 
+    </span>
+  </div>
+  <!-- TODO: Need to get placeholder text as directive input from the main component -->
+</div>

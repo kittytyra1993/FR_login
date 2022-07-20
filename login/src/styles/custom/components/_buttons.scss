@@ -1,0 +1,34 @@
+button{
+    color: color(btn-font);
+    background: color(btn-primary);
+    // text-transform: uppercase;
+    border-radius: 4px;
+    border: none;
+    align-items: center;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    font-size: $font-size-base;
+    font-weight: $font-weight-500;
+    // line-height: 1.5;
+    letter-spacing: .0107142857em;
+    padding: .7125rem 1.25rem;
+    // min-height: 3.125rem;
+    box-shadow: none;
+    outline: none;
+    // width: 100%;
+}
+.user-tag{
+    display: inline-flex;
+    align-items: center;
+    padding: 0 .9375rem;
+    height: 1.875rem;
+    border-radius: .9375rem;
+    border: 1px solid color(border-bottom);
+    line-height: 1;
+    font-size: .875rem;
+    font-weight: 400;
+    color: color(text-secondary);
+    background-color: color(bg-white);
+    white-space: nowrap;
+}

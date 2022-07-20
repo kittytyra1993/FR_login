@@ -1,0 +1,15 @@
+<app-header>
+  <div class="header-logo"></div>
+</app-header>
+
+<app-card>
+  <h2 *ngIf="title" class="text-center">{{ title }}</h2>
+  <div *ngIf="detail">
+    <hr />
+    <br />
+    {{ detail }}
+  </div>
+  <div *ngIf="showLogout" class="text-right mt-4 pt-4">
+    <button (click)="logout()">Logout</button>
+  </div>
+</app-card>

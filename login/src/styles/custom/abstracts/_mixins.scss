@@ -1,0 +1,12 @@
+// @mixin background($img-url,$img-position, $img-repeat, $img-bg-size) {
+//     background: {
+//         image: url($img-url);
+//         position: $img-position;
+//         repeat: $img-repeat;
+//         size: $img-bg-size;
+//     }
+// }
+
+@mixin logoBG($img-url, $img-center, $img-no-repeat, $logo-bg-size) {
+    background: url(#{$img-url}) $img-center/$logo-bg-size $img-no-repeat;
+}

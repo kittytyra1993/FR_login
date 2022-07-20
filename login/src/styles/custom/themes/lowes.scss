@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
+
+$colors: (
+  primary: #004792,
+  primary-light: lighten(#004792, 5%),
+  accent: #f9b800,
+  accent-light: lighten(#f9b800, 5%),
+  bg-white: #fff,
+  btn-primary: #004792,
+  btn-font: #fff,
+  primary-shadow: #e8f0fe, 
+  text-primary: #000,
+  text-secondary: #3c4043,
+  border-color: #cacaca,
+  border-bottom: #d3d3d3,
+  border-focus-color: #0471af,
+  input-bg: #f5f5f5,
+  card-box-shadow: rgba(0, 0, 0, 0.16),
+  bg-form: lighten(#75787b, 40%),
+  error: #dc3545
+);
+
+//LOWES Logo / images
+$img-url: 'src/assets/lowes-logo.png';
+$img-center: center;
+$img-no-repeat: no-repeat;
+$img-bg-size: cover;
+$logo-bg-size: contain;
+//this will not be the background image for lowes. Just putting it in here so it doesn't throw an error.
+$bg-img: 'https://corporate.lowes.com/sites/lowes-corp/files/home_page/responsive-foundation.jpg?imwidth=1920';
+
+// Lowes alignment
+$login-card-alignment:       center;
+
+
+// Fonts
+$font-family-base: 'Arimo','Open Sans', arial !default;
+$font-family-alt: 'Open Sans', arial !default;
+
+// Font sizes
+$font-size-base: 1rem !default;
+$font-size-xl: ($font-size-base * 1.5);
+$font-size-lg: ($font-size-base * 1.25);
+$font-size-sm: ($font-size-base * 0.875);
+$font-size-xs: ($font-size-base * 0.75);
+
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-500: 500 !default;
+$font-weight-bold: 600 !default;
+$font-weight-extra-bold: 700 !default;
+
+$font-weight-base: $font-weight-normal !default;
+
+$h1-font-size: $font-size-base * 2.5 !default;
+$h2-font-size: $font-size-base * 2 !default;
+$h3-font-size: $font-size-base * 1.75 !default;
+$h4-font-size: $font-size-base * 1.5 !default;
+$h5-font-size: $font-size-base * 1.25 !default;
+$h6-font-size: $font-size-base !default;
+
+// Buttons
+
+// Forms
+
+// Form validation - colors
+

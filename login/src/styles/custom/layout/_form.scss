@@ -1,0 +1,212 @@
+.loading-wrapper{
+    opacity: .5;
+}
+.wrapper{
+    opacity: 1;
+}
+.form-logo{
+    @include logoBG($img-url, $img-center, $img-no-repeat, $logo-bg-size);
+    display: inline-block;
+    width: 8rem;
+    height: 4.5rem;
+}
+.form-logo-left{
+    @include logoBG($img-url, $img-center, $img-no-repeat, $logo-bg-size);
+    display: inline-block;
+    width: 12rem;
+    height: 7rem;
+}
+
+.form-header{
+}
+.form-header-two{
+    a{
+        color: color(primary);
+        text-decoration: none;
+    }
+  }
+
+label {
+    font-size: $font-size-xs;
+    font-weight: $font-weight-500;
+}
+
+.form-ctrl{
+    background-color: color(bg-white);
+    height: 3.125rem;
+    border-radius: 4px;
+    color: #2d2d2d;
+    border: 1px solid color(border-color);
+    padding: 1px;
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: $font-size-base;
+    font-weight: $font-weight-normal;
+    line-height: 1.5;
+    background-clip: padding-box;
+    -webkit-transition: border-color .25s ease-out, -webkit-box-shadow .2s linear;
+    // transition: border-color .25s ease-out, -webkit-box-shadow .2s linear;
+    transition: box-shadow .2s linear, border-color .25s ease-out;
+    transition: box-shadow .2s linear, border-color .25s ease-out, -webkit-box-shadow .2s linear;
+    &:focus {
+        outline: none;
+        border: none;
+        box-shadow: 0 0 0 0.125rem color(border-focus-color);
+        background-color: color(bg-white);
+    }
+   
+}
+.form-left{
+    position: relative;
+    box-shadow: 0 0.0625rem 0.125rem 0.0625rem color(card-box-shadow);
+    width: 32.5625rem;
+    padding: 2.5rem 1.25rem 1.25rem;
+    background-color: color(primary);
+    min-height: 65vh;
+}
+.otp-rows{
+    width: 100%;
+    border-bottom: 1px solid color(border-bottom);
+    background-color: color(bg-white);
+    &:hover > .otp-choice-icon {
+       color: color(primary);
+       cursor: pointer;
+    }
+
+    .otp-choice-icon{
+        padding-bottom: 15px;
+        padding-top: 15px;
+        color: color(text-secondary);
+    }
+    .otp-choice-selected-icon{
+        padding-bottom: 15px;
+        padding-top: 15px;
+        cursor: pointer;
+    }
+    .choice-selected{
+        color: color(primary) !important;
+    }
+    .choice-unselected{
+        color: color(text-primary);
+    }
+
+    .otp-choice-selected{
+        border: none;
+        width: inherit;
+        text-align: left;
+        // padding-bottom: 15px;
+        padding: 15px;
+        background-color: color(bg-white);
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+        color: color(primary);
+        &:focus{
+            outline: none;
+        }
+    }
+    .otp-choice{
+        border: none;
+        width: inherit;
+        text-align: left;
+        // padding-bottom: 15px;
+        padding: 15px;
+        background-color: color(bg-white);
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+
+        &:hover{
+            color: color(primary);
+            cursor: pointer;
+    }
+    &:focus{
+        outline: none;
+    }
+    }
+  
+}
+.otp-rows-selected{
+width: 100%;
+border-bottom: 1px solid color(primary);
+background-color: color(bg-white);
+&:hover > .otp-choice-icon {
+    color: color(primary);
+    cursor: pointer;
+ }
+
+ .otp-choice-icon{
+     padding-bottom: 15px;
+     padding-top: 15px;
+     color: color(primary);
+ }
+ .otp-choice-selected-icon{
+     padding-bottom: 15px;
+     padding-top: 15px;
+     cursor: pointer;
+ }
+ .choice-selected{
+     color: color(primary) !important;
+ }
+ .choice-unselected{
+     color: color(text-primary);
+ }
+
+ .otp-choice-selected{
+     border: none;
+     width: inherit;
+     text-align: left;
+     // padding-bottom: 15px;
+     padding: 15px;
+     background-color: color(bg-white);
+     border-top-right-radius: 4px;
+     border-bottom-right-radius: 4px;
+     color: color(primary);
+     &:focus{
+         outline: none;
+     }
+ }
+ .otp-choice{
+     border: none;
+     width: inherit;
+     text-align: left;
+     // padding-bottom: 15px;
+     padding: 15px;
+     background-color: color(bg-white);
+     border-top-right-radius: 4px;
+     border-bottom-right-radius: 4px;
+
+     &:hover{
+         color: color(primary);
+         cursor: pointer;
+ }
+ &:focus{
+     outline: none;
+ }
+ }
+
+}
+
+
+.inline-container{
+    position: relative;
+    flex: 1 1 auto;
+
+//icons inside inputs 
+.password-icons{
+    position: absolute;
+    right: .625rem;;
+    top: 30%;
+    &:hover{
+        color: color(primary);
+        cursor: pointer;
+    }
+}
+}
+.invalid{
+    color: color(error);
+}
+.errors{
+    color: color(error);
+    font-size: 12px;
+    font-weight: 600;
+}

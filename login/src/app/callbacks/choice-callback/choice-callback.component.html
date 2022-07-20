@@ -1,0 +1,21 @@
+<div class="text-left bold">{{header}}</div>
+<div [formGroup]="choiceForm" >
+ <div class = "d-flex" [ngClass]="choice === choiceForm.controls.choiceControl.value ? 'otp-rows-selected' : 'otp-rows'" *ngFor="let choice of choices; let i = index" >
+      <span class = "otp-choice-icon">
+        <i class = "fa" [ngClass] = 
+        "{'fa-envelope-o' : (choice.includes('@') || (choice != 'SMS' && choice != 'Email' && choice != 'Voice Call')),
+          'fa-phone' : !(choice.includes('@') || (choice == 'SMS' && choice =='Email' && choice == 'Voice Call')),
+          'fa-paper-plane-o' : (choice == 'SMS' || choice =='Email' || choice == 'Voice Call')}"
+        ></i>
+      </span>
+      <input  [ngClass]="choice === choiceForm.controls.choiceControl.value ? 'otp-choice-selected' : 'otp-choice'" type="button" value="{{choice}}" (click)="setValue(choice)" >
+      <span @fadeSlideInOut *ngIf = "choice === choiceForm.controls.choiceControl.value" class = "otp-choice-selected-icon">
+      <i class = "fa fa-check-circle-o choice-selected" (click)="removeValue()"> </i>
+    </span>
+    </div>
+</div>
+<div class = "errors" *ngIf="choiceForm.controls['choiceControl'].invalid && (choiceForm.controls['choiceControl'].dirty || choiceForm.controls['choiceControl'].touched)">
+<span @fadeSlideInOut *ngIf = "choiceForm.controls['choiceControl'].errors"> 
+  {{header}} is a required field.
+</span>
+</div>
